@@ -9,25 +9,14 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 
 const routes = [
+
   {
     path: '/',
-    name: 'index',
-    components: { default: () => import('../pages/index.vue') },
-  },
-  {
-    path: '/home',
     name: 'home',
-    components: { default: () => import('../pages/index.vue') },
-    children:[
-      {
-       path: 'search',
-       name: 'search',
-       components: { default: () => import('../pages/search.vue') },
-      }
-     ]
-  },
+    components: { default: () => import('../pages/home.vue') },
+   },
   {
-    path: '/favorites/',
+    path: '/favorites',
     name: 'favorites',
     components: { default: () => import('../pages/favorites.vue') },
   },
